@@ -890,6 +890,7 @@ a:focus {
     margin: 0 0 0 15px;
     white-space: nowrap;
     overflow: hidden;
+    text-align: center;
 }
 
 .portfolio .portfolio-text a.btn {
