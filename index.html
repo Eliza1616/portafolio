@@ -65,11 +65,13 @@
                             <h1>Soy ELizabeth</h1>
                             <h2></h2>
                             <div class="typed-text">
-                                Desarrolladora Web, Desarrolladora Front-End, Gestora de Proyectos Tecnológicos, Analista de Software y Testing
+                                Desarrolladora Web, Desarrolladora Front-End, Gestora de Proyectos Tecnológicos,
+                                Analista de Software y Testing
                             </div>
                         </div>
                         <div class="hero-btn">
-                            <a class="btn" target="_blank" href="doc/HV_ELIZABETHCALDERONLOPEZ_2025.pdf">Descargar HV</a>
+                            <a class="btn" target="_blank" href="doc/HV_ELIZABETHCALDERONLOPEZ_2025.pdf">Descargar
+                                HV</a>
                             <a class="btn" target="_blank" href="https://w.app/0nhaxx">Contáctame</a>
                         </div>
                     </div>
@@ -243,7 +245,7 @@
             <div class="row">
                 <div class="col-12">
                     <ul id="portfolio-filter">
-                        <li data-filter="#" >Todos</li>
+                        <li data-filter="*">Todos</li>
                         <li data-filter=".filter-1" class="filter-active">Lenguajes y Frameworks</li>
                         <li data-filter=".filter-2">Bases de Datos y Control de Versiones</li>
                         <li data-filter=".filter-3">Integraciones y Servicios Web</li>
@@ -424,7 +426,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Filter 3 -->
 
                 <!-- Filter 4 -->
@@ -1279,13 +1281,14 @@
                         <p>elizacalderon1616@hotmail.com</p>
                     </div>
                     <div class="footer-social">
-                        <a target="_blank" href="www.linkedin.com/in/elizabeth-calderón-lópez-3658971a2"><i class="fab fa-linkedin-in"></i></a>
+                        <a target="_blank" href="www.linkedin.com/in/elizabeth-calderón-lópez-3658971a2"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
             <div class="container copyright">
-                <p>&copy; All Right Reserved | Designed By <a
-                href="https://htmlcodex.com">HTML Codex - Elizabeth Calderón</a></p>
+                <p>&copy; All Right Reserved | Designed By <a href="https://htmlcodex.com">HTML Codex - Elizabeth
+                        Calderón</a></p>
             </div>
         </div>
     </div>
@@ -1319,6 +1322,15 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $portfolioContainer = $('.portfolio-container');
+            $portfolioContainer.isotope({
+                filter: '.filter-1', // Mostrar por defecto los elementos del filtro-1
+                layoutMode: 'fitRows'
+            });
+        });
+    </script>
 </body>
 
 </html>
