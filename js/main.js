@@ -129,3 +129,31 @@
     
 })(jQuery);
 
+// Experience Accordion Function
+function toggleAccordion(header) {
+    const item = header.parentElement;
+    const content = item.querySelector('.accordion-content');
+    const icon = header.querySelector('.accordion-icon');
+    const isActive = content.classList.contains('active');
+    
+    // Close all other accordions
+    document.querySelectorAll('.accordion-content.active').forEach(activeContent => {
+        if (activeContent !== content) {
+            activeContent.classList.remove('active');
+            activeContent.parentElement.querySelector('.accordion-header').classList.remove('active');
+            activeContent.parentElement.querySelector('.accordion-icon').classList.remove('active');
+        }
+    });
+    
+    // Toggle current accordion
+    if (isActive) {
+        content.classList.remove('active');
+        header.classList.remove('active');
+        icon.classList.remove('active');
+    } else {
+        content.classList.add('active');
+        header.classList.add('active');
+        icon.classList.add('active');
+    }
+}
+
