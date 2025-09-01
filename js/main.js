@@ -102,7 +102,29 @@
     $('#portfolio-filter li').on('click', function () {
         $("#portfolio-filter li").removeClass('filter-active');
         $(this).addClass('filter-active');
+        
+        // Deshabilitar temporalmente las clases WOW para evitar conflictos
+        $('.portfolio-item').removeClass('wow animated fadeInUp').css({
+            'opacity': '0',
+            'transform': 'translateY(20px)'
+        });
+        
+        // Aplicar el filtro
         portfolioIsotope.isotope({filter: $(this).data('filter')});
+        
+        // Mostrar los elementos filtrados con animación personalizada
+        setTimeout(function() {
+            $('.portfolio-item:not([style*="display: none"])').each(function(index) {
+                var element = $(this);
+                setTimeout(function() {
+                    element.css({
+                        'opacity': '1',
+                        'transform': 'translateY(0)',
+                        'transition': 'all 0.6s ease-out'
+                    });
+                }, index * 100); // Delay más corto para que sea más fluido
+            });
+        }, 150);
     });
     
 })(jQuery);
