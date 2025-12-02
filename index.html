@@ -1675,6 +1675,13 @@
                 filter: '.filter-1', // Mostrar por defecto los elementos del filtro-1
                 layoutMode: 'fitRows'
             });
+            
+            // Close mobile menu when clicking on a nav link
+            $('.navbar-nav .nav-link').on('click', function() {
+                $('.navbar-collapse').removeClass('show');
+                $('.navbar-toggler').addClass('collapsed');
+                $('.navbar-toggler').attr('aria-expanded', 'false');
+            });
         });
     </script>
 </body>
