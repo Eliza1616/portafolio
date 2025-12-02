@@ -130,6 +130,68 @@ a:focus {
     color: #414141;
 }
 
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 28px;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background: linear-gradient(135deg, #128c7e, #075e54);
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+    text-decoration: none;
+}
+
+.whatsapp-float i {
+    line-height: 1;
+}
+
+.whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+    color: white;
+}
+
+@keyframes pulse-whatsapp {
+    0% { 
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% { 
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8), 0 0 0 10px rgba(37, 211, 102, 0.1);
+    }
+    100% { 
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 70px;
+        right: 15px;
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+    }
+}
+
 
 /**********************************/
 /*********** Nav Bar CSS **********/
